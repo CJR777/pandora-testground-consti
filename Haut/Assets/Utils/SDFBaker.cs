@@ -7,16 +7,21 @@ using UnityEngine.VFX.SDF;
 
 public class SDFBaker : MonoBehaviour
 {
-    public static RenderTexture ConvertToSDF (Mesh mesh, IrisData config)
+    static int maxResolution = 64, signPassCount = 1;
+    static Vector3 center, sizeBox;
+    static float threshold = 0.5f;
+    public Mesh mesh;
+    
+    public static RenderTexture ConvertToSDF (Mesh mesh)
     {
         MeshToSDFBaker meshBaker = new MeshToSDFBaker
         (
-            config.sizeBox,
-            config.center,
-            config.maxResolution,
+            sizeBox,
+            center,
+            maxResolution,
             mesh,
-            config.signPassCount,
-            config.threshold
+            signPassCount,
+            threshold
         );
         
         meshBaker.BakeSDF();
