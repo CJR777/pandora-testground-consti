@@ -258,7 +258,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   volumeAnchorOverride: {fileID: 0}
-  antialiasing: 0
+  antialiasing: 3
   SMAAQuality: 2
   dithering: 0
   stopNaNs: 0
@@ -461,13 +461,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perlinScale: 3
-  waveSpeed: 10
+  waveSpeed: 2
   waveHeight: 0.3
   offset: 0
   meshrender: {fileID: 0}
   rendT: {fileID: 0}
   meshOptimization: 2
-  resolution: 17
+  resolution: 11
   gizmos: 1
 --- !u!23 &592262200
 MeshRenderer:

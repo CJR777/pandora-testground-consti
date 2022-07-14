@@ -39,7 +39,7 @@ public class ProceduralMesh : MonoBehaviour {
 	[SerializeField]
     MeshOptimizationMode meshOptimization;
 
-	[SerializeField, Range(17, 50)]
+	[SerializeField, Range(3, 50)]
 	int resolution = 17;
 
 	[System.Flags]
@@ -71,7 +71,7 @@ public class ProceduralMesh : MonoBehaviour {
       
     }
 
-	    private void Start() {
+	private void Start() {
  
         Mesh mesh = GetComponent<MeshFilter>().mesh;
 
@@ -153,7 +153,7 @@ public class ProceduralMesh : MonoBehaviour {
 
 	void Update () {
 		GenerateMesh();
-		enabled = false;
+		enabled = true;
 
 		vertices = null;
 		normals = null;
